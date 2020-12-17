@@ -62,7 +62,7 @@ module.exports = (env, argv) => ({
     devServer: {
         contentBase: SRC_DIR,
         watchContentBase: true,
-        port: 9000,
+        port: 9001,
         open: true
     }
 });

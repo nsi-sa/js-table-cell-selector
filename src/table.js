@@ -96,6 +96,9 @@ export default class Table {
             this.isIgnoreMouseDown = this.obSelector.isSelectedCell(cell);
             return;
         }
+        if(!_gOptions.canMouseSelectMultipleByDrag){
+            return;
+        }
 
         let coords = this.obSelector.getSelectedRectangleCoords( this.coord0, [cell.parentNode.rowIndex, cell.cellIndex] );
         if ( coords !== false ) this.obSelector.select(coords[0], coords[1]);
