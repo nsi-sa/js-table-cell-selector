@@ -32,6 +32,7 @@ export let _gOptions = {
         cell.innerText = data;
     },
     tableClass: 'tcs',// class added to table
+    canMouseSelectMultipleByDrag: true
 };
 
 export default class TableCellSelector {

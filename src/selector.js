@@ -230,8 +230,7 @@ export default class Selector {
      * @param c2 - end position [1, 1]
      * @returns {boolean}
      */
-    select (c1, c2)
-    {
+    select (c1, c2) {
         let isSelected = false;
 
         if (c1[0] >= this.countRows || c1[1] >= this.countCols || c2[0] < 0 || c2[1] < 0) return false;

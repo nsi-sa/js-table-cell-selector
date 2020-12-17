@@ -335,8 +335,9 @@ var _gOptions = {
   setCellFn: function setCellFn(cell, data, coord) {
     cell.innerText = data;
   },
-  tableClass: 'tcs' // class added to table
-
+  tableClass: 'tcs',
+  // class added to table
+  canMouseSelectMultipleByDrag: true
 };
 
 var TableCellSelector = /*#__PURE__*/function () {
@@ -4421,6 +4422,10 @@ var Table = /*#__PURE__*/function () {
 
       if (!this.isMouseDown) {
         this.isIgnoreMouseDown = this.obSelector.isSelectedCell(cell);
+        return;
+      }
+
+      if (!_app__WEBPACK_IMPORTED_MODULE_0__["_gOptions"].canMouseSelectMultipleByDrag) {
         return;
       }
 
